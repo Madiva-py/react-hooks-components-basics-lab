@@ -2,8 +2,9 @@ import React from "react";
 
 function NavBar() {
   return (
-    <nav>
+    <nav className="navbar">
       <a href="#home">I'm a link!</a>
+      <a href="#about">about</a>
     </nav>
   );
 }
@@ -16,17 +17,27 @@ function Home() {
   );
 }
 
-{/* write an <About> component here */}
+function About (){
+   return (
+    <div id="about">
+      <h2>About</h2>
+      <p>Learn more about me and my work.</p>
+    </div>
+  );
+
+}
 
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <NavBar />
-      {/* add the <Home> component here */}
-      {/* add your <About> component here */}
-    </div>
+      <Home/>
+      <About />
+      </div>
   );
+
+
 }
 
 export default App;
